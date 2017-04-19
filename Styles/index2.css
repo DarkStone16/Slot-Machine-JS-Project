@@ -1,0 +1,76 @@
+body{
+    padding: 20px;
+    margin: 145px;
+    margin-left: 50px;
+    background-image: url(../Images/fond2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#first{
+    font-size: 40px;
+    font-family: Chalkduster;
+    text-align: center;
+    color: black;
+}
+
+.row{
+    border: solid 2px black;
+    height: 450px;
+    background-color: rgba(255,255,255,0.7);
+}
+
+.lol{
+    border: solid 1px black;
+    width: 683px;
+    height: 375    px;
+    margin-left: -17px;
+}
+
+.container .col-md-5 {
+    border: solid 2px black;
+    height: 450px;
+}
+
+table{
+    margin: auto;
+}
+
+.lol{
+    text-align: center;
+}
+
+button:hover{
+    background-color:#FCDEDE;
+}
+
+button:active{
+    background-color:#FCDEDE;
+    box-shadow:1px 1px 1px #D83F3D inset;
+}
+
+input, button{
+    background-color:#FFF3F3;
+    text-align: center;
+}
+
+input, button {
+    padding:3px;
+    border:1px solid #F5C5C5;
+    border-radius:5px;
+    width:100px;
+    box-shadow:1px 1px 2px #C0C0C0 inset;
+}
+
+input{
+    width:50px;
+    margin-left:5px;
+    box-shadow:1px 1px 1px #D83F3D;
+    cursor:pointer;
+}
+
+button{
+    width:100px;
+    margin-left:5px;
+    box-shadow:1px 1px 1px #D83F3D;
+    cursor:pointer;
+}
