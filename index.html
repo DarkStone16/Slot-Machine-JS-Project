@@ -37,8 +37,8 @@
 
 </form>
 
-<script>
 
+<script>
 
     //Déclaration d'un tableau
     var tabcarte = [0, 1, 2, 3];
@@ -69,32 +69,33 @@
 
     }
 
+
     function tourner(e) {
 
         //Animation en JS avec sélection d'une carte au hasard pour les 4 slots
 
-        turns1 = Math.floor(Math.random() * 5)
+        turns1 = Math.floor(Math.random() * 5);
 
         for (a = 0; a < turns1; a++) {
-            document.querySelector('#slot1').src = "" + tabcarte[a] + ".png";
+            document.querySelector('#slot1').src = "Images/" + tabcarte[a] + ".png";
         }
 
-        turns2 = Math.floor(Math.random() * 5)
+        turns2 = Math.floor(Math.random() * 5);
 
         for (b = 0; b < turns2; b++) {
-            document.querySelector('#slot2').src = "" + tabcarte[b] + ".png";
+            document.querySelector('#slot2').src = "Images/" + tabcarte[b] + ".png";
         }
 
-        turns3 = Math.floor(Math.random() * 5)
+        turns3 = Math.floor(Math.random() * 5);
 
         for (c = 0; c < turns3; c++) {
-            document.querySelector('#slot3').src = "" + tabcarte[c] + ".png";
+            document.querySelector('#slot3').src = "Images/" + tabcarte[c] + ".png";
         }
 
-        turns4 = Math.floor(Math.random() * 5)
+        turns4 = Math.floor(Math.random() * 5);
 
         for (d = 0; d < turns4; d++) {
-            document.querySelector('#slot4').src = "" + tabcarte[d] + ".png";
+            document.querySelector('#slot4').src = "Images/" + tabcarte[d] + ".png";
         }
 
         compt++;
@@ -102,31 +103,46 @@
         if (compt < 25) {
             setTimeout("tourner(compt);", 50);
         } else {
+
             //Fin de l'animation, on check les combinaisons obtenues
 
+
             //Si les 4 symboles sont identiques, on obtient 5 crédits
-            if(){
+            if ((document.querySelector('#slot1').src == document.querySelector('#slot2').src) && (document.querySelector('#slot1').src == document.querySelector('#slot3').src) && (document.querySelector('#slot1').src == document.querySelector('#slot4').src)) {
                 document.querySelector('span.append').innerHTML = '4 symboles identiques - Vous avez gagné 5 crédits <br>' + document.querySelector('span.append').innerHTML;
+
+                document.querySelector('#credits').value = Math.floor(document.querySelector('#credits').value) + 5;
             }
 
 
             //Sinon, si 3 symboles sont identiques, on obtient 2 crédits
-            else if(){
+            else if (((document.querySelector('#slot1').src == document.querySelector('#slot2').src) && (document.querySelector('#slot2').src == document.querySelector('#slot3').src)) ||
+
+                ((document.querySelector('#slot1').src == document.querySelector('#slot3').src) && (document.querySelector('#slot3').src == document.querySelector('#slot4').src)) ||
+
+                ((document.querySelector('#slot2').src == document.querySelector('#slot3').src) && (document.querySelector('#slot3').src == document.querySelector('#slot4').src)) ||
+
+                ((document.querySelector('#slot1').src == document.querySelector('#slot2').src) && (document.querySelector('#slot2').src == document.querySelector('#slot4').src))){
+
                 document.querySelector('span.append').innerHTML = "3 symboles identiques - Vous avez gagné 2 crédits <br>" + document.querySelector('span.append').innerHTML;
+
+                document.querySelector('#credits').value = Math.floor(document.querySelector('#credits').value) + 2;
+
+
             }
 
 
-            //Aucune combinaisons gagnantes
+            //Sinon, il n'y a aucune combinaisons gagnantes
             else {
                 document.querySelector('span.append').innerHTML = "Pas de combinaisons gagnantes - Vous avez perdu 1 crédit <br>" + document.querySelector('span.append').innerHTML;
             }
-        }
 
+            //Si les crédits sont supérieurs au highscore, alors highscore prend la valeur de crédit
+            if(document.querySelector('#credits').value > document.querySelector('#highscore').value){
+                e.preventDefault();
+                document.querySelector('#highscore').value = document.querySelector('#credits').value;
+            }
 
-        //Si les crédits sont supérieurs au highscore, alors highscore prend la valeur de crédit
-        if (document.querySelector('#credits').value > document.querySelector('#highscore').value) {
-            e.preventDefault();
-            document.querySelector('#highscore').value = document.querySelector('#credits').value;
         }
 
     }
@@ -135,5 +151,4 @@
 
 
 </body>
-
 </html>
