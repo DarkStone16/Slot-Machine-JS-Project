@@ -40,6 +40,96 @@
 <script>
 
 
+    //Déclaration d'un tableau
+    var tabcarte = [0, 1, 2, 3];
+
+    // Valeur initiale des crédits
+    document.querySelector('#credits').value = 20;
+
+    //Valeur highscore initiale
+    document.querySelector('#highscore').value = document.querySelector('#credits').value;
+
+
+    function cred() {
+
+        //On regarde si le joueur possède des crédits, si oui on passe à l'étape suivante, sinon on affiche une alerte
+        if (document.querySelector('#credits').value <= 0) {
+            alert("Crédits insuffisants pour continuer à jouer.");
+            return;
+        }
+
+        compt = 0;
+
+
+        //On retire le crédit pour jouer
+        document.querySelector('#credits').value--;
+
+        //On lance la fonction suivante
+        tourner();
+
+    }
+
+    function tourner(e) {
+
+        //Animation en JS avec sélection d'une carte au hasard pour les 4 slots
+
+        turns1 = Math.floor(Math.random() * 5)
+
+        for (a = 0; a < turns1; a++) {
+            document.querySelector('#slot1').src = "" + tabcarte[a] + ".png";
+        }
+
+        turns2 = Math.floor(Math.random() * 5)
+
+        for (b = 0; b < turns2; b++) {
+            document.querySelector('#slot2').src = "" + tabcarte[b] + ".png";
+        }
+
+        turns3 = Math.floor(Math.random() * 5)
+
+        for (c = 0; c < turns3; c++) {
+            document.querySelector('#slot3').src = "" + tabcarte[c] + ".png";
+        }
+
+        turns4 = Math.floor(Math.random() * 5)
+
+        for (d = 0; d < turns4; d++) {
+            document.querySelector('#slot4').src = "" + tabcarte[d] + ".png";
+        }
+
+        compt++;
+
+        if (compt < 25) {
+            setTimeout("tourner(compt);", 50);
+        } else {
+            //Fin de l'animation, on check les combinaisons obtenues
+
+            //Si les 4 symboles sont identiques, on obtient 5 crédits
+            if(){
+                document.querySelector('span.append').innerHTML = '4 symboles identiques - Vous avez gagné 5 crédits <br>' + document.querySelector('span.append').innerHTML;
+            }
+
+
+            //Sinon, si 3 symboles sont identiques, on obtient 2 crédits
+            else if(){
+                document.querySelector('span.append').innerHTML = "3 symboles identiques - Vous avez gagné 2 crédits <br>" + document.querySelector('span.append').innerHTML;
+            }
+
+
+            //Aucune combinaisons gagnantes
+            else {
+                document.querySelector('span.append').innerHTML = "Pas de combinaisons gagnantes - Vous avez perdu 1 crédit <br>" + document.querySelector('span.append').innerHTML;
+            }
+        }
+
+
+        //Si les crédits sont supérieurs au highscore, alors highscore prend la valeur de crédit
+        if (document.querySelector('#credits').value > document.querySelector('#highscore').value) {
+            e.preventDefault();
+            document.querySelector('#highscore').value = document.querySelector('#credits').value;
+        }
+
+    }
 
 </script>
 
