@@ -6,29 +6,55 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-#first{
+
+
+h1{
     font-size: 40px;
-    font-family: Chalkduster;
     text-align: center;
     color: black;
+    font-family: 'Lobster', cursive;
 }
+
 .container .col-xs-8{
     border: solid 3px black;
     height: 450px;
-    background-color: #ffffff;
-    opacity: 0.7;
+    background-color: rgba(255, 255, 255, 0.7);
 }
+
 .lol{
     border: solid 1px black;
     width: 777px;
     margin-left: -18px;
 }
-#inst{
+
+h4{
     text-align: center;
     color: black;
     font-size: 20px;
+    margin: 30px;
 }
 
 .rer{
     text-align: center;
+    font-size: 20px;
+}
+
+#btn{
+  background: #bad439;
+  background-image: -webkit-linear-gradient(top, #bad439, #ebab67);
+  background-image: -moz-linear-gradient(top, #bad439, #ebab67);
+  background-image: -ms-linear-gradient(top, #bad439, #ebab67);
+  background-image: -o-linear-gradient(top, #bad439, #ebab67);
+  background-image: linear-gradient(to bottom, #bad439, #ebab67);
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: Arial;
+  color: #9c3a21;
+  font-size: 25px;
+  padding: 0px 0px 0px 0px;
+  border: solid #bdb586 3px;
+  text-decoration: none;
+   display: block;
+   margin : auto;    
 }
