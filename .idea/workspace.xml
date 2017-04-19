@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6db36097-69e1-40e5-b611-09e71268c3d0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Images/casino.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Images/casino2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index2.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scriptstart/.idea/workspace.xml" afterPath="$PROJECT_DIR$/Scriptstart/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Styles/index.css" afterPath="$PROJECT_DIR$/Styles/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Styles/index2.css" afterPath="$PROJECT_DIR$/Styles/index2.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index2.html" afterPath="$PROJECT_DIR$/index2.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,26 +17,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Styles/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index2.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index2.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -97,8 +70,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="103" />
-    <option name="y" value="100" />
+    <option name="x" value="104" />
+    <option name="y" value="172" />
     <option name="width" value="1079" />
     <option name="height" value="674" />
   </component>
@@ -228,15 +201,15 @@
       <workItem from="1492508908364" duration="11070000" />
       <workItem from="1492588317939" duration="1941000" />
       <workItem from="1492590993142" duration="29000" />
-      <workItem from="1492591820185" duration="1999000" />
+      <workItem from="1492591820185" duration="2598000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15039000" />
+    <option name="totallyTimeSpent" value="15638000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="103" y="100" width="1079" height="674" extended-state="1" />
+    <frame x="104" y="172" width="1079" height="674" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24837813" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
