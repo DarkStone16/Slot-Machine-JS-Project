@@ -52,14 +52,14 @@
 
                             <br><br>
 
-                        </form>
+                        </form>    
 
 
                     </div>
                 </div>
 
                 <div class="col-md-5">
-                    
+
                     <br>
 
                     <span class="append"></span>
@@ -139,7 +139,11 @@
 
 
                     //Si les 4 symboles sont identiques, on obtient 5 crédits
-                    if ((document.querySelector('#slot1').src == document.querySelector('#slot2').src) && (document.querySelector('#slot1').src == document.querySelector('#slot3').src) && (document.querySelector('#slot1').src == document.querySelector('#slot4').src)) {
+                    if ((document.querySelector('#slot1').src == document.querySelector('#slot2').src) 
+                        && (document.querySelector('#slot1').src == document.querySelector('#slot3').src) 
+                        && (document.querySelector('#slot1').src == document.querySelector('#slot4').src)) 
+
+                    {
                         document.querySelector('span.append').innerHTML = '4 symboles identiques - Vous avez gagné 5 crédits <br>' + document.querySelector('span.append').innerHTML;
 
                         document.querySelector('#credits').value = Math.floor(document.querySelector('#credits').value) + 5;
@@ -147,15 +151,19 @@
 
 
                     //Sinon, si 3 symboles sont identiques, on obtient 2 crédits
-                    else if (((document.querySelector('#slot1').src == document.querySelector('#slot2').src) && (document.querySelector('#slot2').src == document.querySelector('#slot3').src)) ||
+                    else if (((document.querySelector('#slot1').src == document.querySelector('#slot2').src) 
+                              && (document.querySelector('#slot2').src == document.querySelector('#slot3').src)) 
 
-                             ((document.querySelector('#slot1').src == document.querySelector('#slot3').src) && (document.querySelector('#slot3').src == document.querySelector('#slot4').src)) ||
+                             ||((document.querySelector('#slot1').src == document.querySelector('#slot3').src) 
+                              && (document.querySelector('#slot3').src == document.querySelector('#slot4').src)) 
+                             
+                             ||((document.querySelector('#slot2').src == document.querySelector('#slot3').src) 
+                              && (document.querySelector('#slot3').src == document.querySelector('#slot4').src)) 
+                             
+                             ||((document.querySelector('#slot1').src == document.querySelector('#slot2').src) 
+                              && (document.querySelector('#slot2').src == document.querySelector('#slot4').src))){
 
-                             ((document.querySelector('#slot2').src == document.querySelector('#slot3').src) && (document.querySelector('#slot3').src == document.querySelector('#slot4').src)) ||
-
-                             ((document.querySelector('#slot1').src == document.querySelector('#slot2').src) && (document.querySelector('#slot2').src == document.querySelector('#slot4').src))){
-
-                        document.querySelector('span.append').innerHTML = "3 symboles identiques - Vous avez gagné 2 crédits <br>" + document.querySelector('span.append').innerHTML;
+                        document.querySelector('span.append').innerHTML = '3 symboles identiques - Vous avez gagné 2 crédits <br>' + document.querySelector('span.append').innerHTML;
 
                         document.querySelector('#credits').value = Math.floor(document.querySelector('#credits').value) + 2;
 
